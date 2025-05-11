@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
 :root {
-  --primary-color: #99a98f;
+  --primary-color: #6f4e37;
   --decent-color: #d6e8db;
   --accent-color: #ffffff;
-  --secondary-color: rgb(9, 189, 9);
+  --secondary-color: #a0522d;
   --font-family: "Poppins", sans-serif;
-  --text-color: gray;
+  --text-color: #333333;
 }
 
 * {
@@ -14,11 +15,7 @@
   border: none;
   outline: none;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  display: flex;
+  font-family: var(--font-family);
 }
 
 .sidebar {
@@ -29,13 +26,12 @@ body {
   height: 100vh;
   padding: 1rem;
   background: #f5f5dc;
-  color: #6f4e37;
-  overflow: hidden;
+  color: var(--primary-color);
   transition: all 0.3s ease-in-out;
 }
 
 .logo {
-  height: 80px;
+  height: 110px;
   padding: 16px 0;
   text-align: center;
 }
@@ -46,7 +42,6 @@ body {
   object-fit: contain;
   display: block;
   margin: 0 auto;
-  margin-top: -35px;
 }
 
 .menu {
@@ -55,68 +50,24 @@ body {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
-  height: calc(100% - 150px);
-  gap: 16px;
-}
-
-.logout {
-  margin-top: auto;
-}
-
-.menu li {
-  border-radius: 8px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.menu li:hover,
-.menu li.active {
-  background-color: #e6d3b399;
-}
-
-.menu a {
-  display: flex;
-  align-items: center;
   gap: 12px;
+}
+
+.sidebar .menu button.btn,
+.logout button {
+  background-color: var(--primary-color) !important;
+  color: var(--accent-color) !important;
+  border: none !important;
   padding: 0.75rem 1rem;
-  color: #6f4e37;
-  font-size: 14px;
-  text-decoration: none;
-  justify-content: flex-start;
-  white-space: nowrap;
-}
-
-.menu a i {
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.menu img.icon {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.menu a span {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-/* main */
-.menu--list {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.menu--item {
-  width: 114px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border: 2px solid var(--decent-color);
-  border-radius: 10px;
-  padding: 10px 13px;
-  color: grey;
-}
-.menu--item img {
+  border-radius: 12px;
+  transition: background-color 0.3s, transform 0.2s;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .menu button.btn:hover,
+.logout button:hover {
+  background-color: var(--secondary-color) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
