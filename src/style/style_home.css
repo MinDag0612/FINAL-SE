@@ -1,14 +1,17 @@
+/* Import font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
+/* Biến màu và font */
 :root {
   --primary-color: #6f4e37;
-  --decent-color: #d6e8db;
-  --accent-color: #ffffff;
   --secondary-color: #a0522d;
+  --accent-color: #ffffff;
+  --decent-color: #d6e8db;
   --font-family: "Poppins", sans-serif;
   --text-color: #333333;
 }
 
+/* Reset mặc định */
 * {
   margin: 0;
   padding: 0;
@@ -18,8 +21,25 @@
   font-family: var(--font-family);
 }
 
+body,
+h1,
+h2,
+h5,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sidebar */
 .sidebar {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 200px;
@@ -27,10 +47,12 @@
   padding: 1rem;
   background: #f5f5dc;
   color: var(--primary-color);
+  z-index: 1000;
+  overflow-y: auto;
   transition: all 0.3s ease-in-out;
 }
 
-.logo {
+.sidebar .logo {
   height: 110px;
   padding: 16px 0;
   text-align: center;
@@ -44,7 +66,7 @@
   margin: 0 auto;
 }
 
-.menu {
+.sidebar .menu {
   list-style: none;
   padding: 0;
   margin-top: 60px;
@@ -53,30 +75,13 @@
   gap: 12px;
 }
 
-.sidebar .menu button.btn,
-.logout button {
-  background-color: var(--primary-color) !important;
-  color: var(--accent-color) !important;
-  border: none !important;
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  transition: background-color 0.3s, transform 0.2s;
-  width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar .menu button.btn:hover,
-.logout button:hover {
-  background-color: var(--secondary-color) !important;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-html {
-  scroll-behavior: smooth;
-}
 .sidebar .menu a.btn {
   display: block;
-  background: linear-gradient(135deg, #6f4e37, #a0522d);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   color: white !important;
   text-decoration: none;
   padding: 12px 20px;
@@ -92,20 +97,94 @@ html {
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+/* Phần chính */
+main {
+  margin-left: 200px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Tiêu đề mục menu */
 .section-heading {
-  margin-top: 0;
-  padding-top: 0;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
   scroll-margin-top: 80px;
 }
+
 main section:first-of-type {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-.section-heading {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
 h2 {
   margin-top: 0;
+}
+
+/* Card đồ uống */
+.drink-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  height: 100%;
+}
+
+.drink-card:hover {
+  transform: translateY(-5px);
+}
+
+.drink-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.drink-card h5 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Nút giỏ hàng */
+button[data-bs-toggle="offcanvas"] {
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button[data-bs-toggle="offcanvas"]:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  .row-cols-md-4 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
