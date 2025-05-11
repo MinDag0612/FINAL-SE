@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+:root {
+  --primary-color: #99a98f;
+  --decent-color: #d6e8db;
+  --accent-color: #ffffff;
+  --secondary-color: rgb(9, 189, 9);
+  --font-family: "Poppins", sans-serif;
+  --text-color: gray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  padding: 1rem;
+  background: #f5f5dc;
+  color: #6f4e37;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  height: 80px;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.shop-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  margin-top: -35px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 150px);
+  gap: 16px;
+}
+
+.logout {
+  margin-top: auto;
+}
+
+.menu li {
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menu li:hover,
+.menu li.active {
+  background-color: #e6d3b399;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.75rem 1rem;
+  color: #6f4e37;
+  font-size: 14px;
+  text-decoration: none;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+
+.menu a i {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.menu img.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.menu a span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* main */
+.menu--list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.menu--item {
+  width: 114px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid var(--decent-color);
+  border-radius: 10px;
+  padding: 10px 13px;
+  color: grey;
+}
+.menu--item img {
+  width: 100%;
+}
