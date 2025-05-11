@@ -4,12 +4,98 @@
 		<meta charset="UTF-8">
 		<title>Đăng ký tài khoản</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="style/home.css">
+		<link rel="stylesheet" href="style/style_home.css">
 	</head>
     <body>
-        <h1>Hello</h1>
 
 
+		{# Duy #}
+		<div class="sidebar">
+			<div class="logo">
+				<img src="style/image/logo.png" alt="logo shop" class="shop-logo" />
+			</div>
+			<ul class="menu">
+				<li class="active">
+					<a href="#">
+						<img src="style/image/trasua.png" alt="milk tea png" class="icon" />
+						<span>Milk tea</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="style/image/fruit.png" alt="fruit tea png" class="icon" />
+						<span>Fruit tea</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="style/image/coffee.png" alt="coffee png" class="icon" />
+						<span>Coffee</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="style/image/ice.png" alt="ice png" class="icon" />
+						<span>Ice-blended</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="style/image/desert.png" alt="desert png" class="icon" />
+						<span>Dessert</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="style/image/topping.png" alt="topping png" class="icon" />
+						<span>Topping</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="style/image/setting.png" alt="setting png" class="icon" />
+						<span>Settings</span>
+					</a>
+				</li>
+
+				<!-- Logout đặt cuối menu -->
+				<li class="logout">
+					<a href="#">
+						<img src="style/image/logout.png" alt="log out png" class="icon" />
+						<span>Logout</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- <section class="cover">
+			<div class="cover-overlay">
+			<h1>Vietnamese coffee</h1>
+			<span class="Slogan"
+				>Make every day better <br />
+				But first, coffee !</span
+			>
+			</div>
+		</section> -->
+		<main>
+			<h2 class="section-heading"></h2>
+			<div class="menu--list">
+				<div class="menu--item" onclick="addToCart('Milk Tea', 3.99)">
+					<img src="style/image/trasua_anh.png" alt="trasua">
+					<h5>Tra sua</h5>
+					<p>$3.99</p>
+				</div>
+
+				<div class="menu--item" onclick="addToCart('Latte', 4.50)">
+					<img src="style/image/coffee.png" alt="Latte">
+					<h5>Latte</h5>
+                <p>$4.50</p>
+            	</div>
+			</div>  		
+		</main>
+
+
+
+		{# Cart (right side bar) #}
 		<button class="position-fixed top-0 end-0 m-3 p-3 bg-transparent border-0"
 				data-bs-toggle="offcanvas" 
 				data-bs-target="#offcanvasScrolling"
@@ -27,20 +113,23 @@
 				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 			</div>
 			<div class="offcanvas-body d-flex flex-column">
-				<!-- Content will take available space -->
-				<p class="text-center">Try scrolling the rest of the page...</p>
+				<!-- Cart Items Container -->
+            	<div id="cartItemsContainer" class="flex-grow-1">
+					<p class="text-center">Yo shit is empty bruh</p>
+				</div>
 				
 				<!-- Spacer pushes button down -->
 				<div class="mt-auto"></div>
 				
-				<!-- Button at bottom (centered) -->
-				<div class="text-center py-3">
-					<h5>Total</h5>
-					<button class="btn btn-primary">Checkout</button>
-				</div>
+				<!-- Total and Checkout -->
+				<div class="text-center py-3 border-top">
+					<h5>Total: $<span id="cartTotal">0.00</span></h5>
+					<button class="btn btn-primary mt-2">Checkout</button>
+            	</div>
 			</div>
 		</div>
 
+		<script src="templates/home.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </body>
 </html>
