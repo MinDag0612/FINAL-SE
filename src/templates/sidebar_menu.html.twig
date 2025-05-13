@@ -9,13 +9,81 @@
     />
     <link rel="stylesheet" href="style/home.css" />
     <link rel="stylesheet" href="style/style_home.css" />
+
     <style>
       html {
         scroll-behavior: smooth;
       }
+      /*  dark mode dự phòng */
+      body.dark-mode {
+        background-color: #0f172a !important;
+        color: #e2e8f0 !important;
+      }
+      body.dark-mode main {
+        background-color: #0f172a !important;
+        background-image: none !important;
+        color: #e2e8f0 !important;
+      }
+      body.dark-mode .drink-card {
+        background-color: #1e293b !important;
+        color: #e2e8f0 !important;
+        box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05) !important;
+      }
+      body.dark-mode .drink-card h5 {
+        color: #f1f5f9 !important;
+      }
+      body.dark-mode .section-heading {
+        color: #f1f5f9 !important;
+      }
+      body.dark-mode .btn-primary {
+        background-color: #3b82f6 !important;
+        border-color: #3b82f6 !important;
+        color: #fff !important;
+      }
+      body.dark-mode .sidebar {
+        background-color: #1e293b !important;
+        color: #e2e8f0 !important;
+      }
+      body.dark-mode .sidebar .menu a.btn {
+        background: linear-gradient(135deg, #334155, #475569) !important;
+        color: #e2e8f0 !important;
+      }
+      body.dark-mode .btn-danger {
+        background-color: #dc2626 !important;
+        border-color: #dc2626 !important;
+        color: #fff !important;
+      }
+      /* them */
+      .user-greeting {
+        background-color: #fbe9e7; /* màu nền cam nhạt */
+        border: 2px solid #ffab91; /* viền cam đậm */
+        border-radius: 10px;
+        padding: 16px;
+        margin-bottom: 32px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .user-greeting h4 {
+        margin: 0;
+        color: #4e342e; /* chữ màu nâu đậm */
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
+    <div
+      class="dark-mode-toggle"
+      style="position: fixed; top: 10px; right: 40px; z-index: 1001"
+    >
+      <span class="label-text">Dark </span>
+      <span class="label-text"> </span>
+      <label class="switch">
+        <input type="checkbox" id="darkToggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
     <div class="sidebar">
       <div class="logo">
         <img src="style/image/logo.png" alt="logo shop" class="shop-logo" />
@@ -31,126 +99,13 @@
       </ul>
     </div>
 
-    <main class="px-4 pb-4 pt-0" style="margin-left: 220px">
-      <section id="milk-tea" class="menu-section mt-5">
-        <h2 class="section-heading">Milk Tea</h2>
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
+    <main class="px-4 pb-4" style="margin-left: 200px; padding-top: 50px">
+      <div class="user-greeting text-center mb-4">
+        <h4>Brewed to perfection, served with passion☕</h4>
+      </div>
 
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="fruit-tea" class="menu-section mt-5">
-        <h2 class="section-heading">Fruit Tea</h2>
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="coffee" class="menu-section mt-5">
-        <h2 class="section-heading">Coffee</h2>
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
-          <div class="col">
-            <div class="drink-card">
-              <img src="" alt="Product Image" class="img-fluid" />
-              <h5>Product Name</h5>
-              <p>$0.00</p>
-              <button class="btn btn-primary">Choose</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="ice-blended" class="menu-section mt-5">
-        <h2 class="section-heading">Ice-blended</h2>
+      <section id="milk-tea" class="menu-section no-top-margin">
+        <h2 class="section-heading text-center text-center">Milk Tea</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
             <div class="drink-card">
@@ -187,8 +142,8 @@
         </div>
       </section>
 
-      <section id="dessert" class="menu-section mt-5">
-        <h2 class="section-heading">Dessert</h2>
+      <section id="fruit-tea" class="menu-section">
+        <h2 class="section-heading text-center">Fruit Tea</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
             <div class="drink-card">
@@ -225,8 +180,122 @@
         </div>
       </section>
 
-      <section id="topping" class="menu-section mt-5">
-        <h2 class="section-heading">Topping</h2>
+      <section id="coffee" class="menu-section">
+        <h2 class="section-heading text-center">Coffee</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ice-blended" class="menu-section">
+        <h2 class="section-heading text-center">Ice-blended</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dessert" class="menu-section">
+        <h2 class="section-heading text-center">Desert</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <button class="btn btn-primary">Choose</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="topping" class="menu-section">
+        <h2 class="section-heading text-center">Topping</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
             <div class="drink-card">
@@ -268,5 +337,12 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const toggle = document.getElementById("darkToggle");
+      toggle.addEventListener("change", () => {
+        document.body.classList.toggle("dark-mode", toggle.checked);
+      });
+    </script>
   </body>
 </html>
