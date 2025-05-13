@@ -112,7 +112,7 @@ body {
 /* Phần chính */
 main {
   margin-left: 200px;
-  padding: 0 20px 20px; /* Xóa padding-top để loại bỏ khoảng trắng */
+  padding: 0 20px 20px;
   background-color: #f9f6f1;
   background-image: url("style/image/bg-texture.png");
   background-size: cover;
@@ -259,61 +259,17 @@ body.dark-mode .btn-primary {
   border-color: #3b82f6 !important;
   color: #fff !important;
 }
-body.dark-mode {
-  background-color: #0f172a !important;
-  color: #e2e8f0 !important;
-}
-body.dark-mode main {
-  background-color: #0f172a !important;
-  background-image: none !important;
-  color: #e2e8f0 !important;
-}
-body.dark-mode .drink-card {
-  background-color: #1e293b !important;
-  color: #e2e8f0 !important;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05) !important;
-}
-body.dark-mode .drink-card h5 {
-  color: #f1f5f9 !important;
-}
-body.dark-mode .section-heading {
-  color: #f1f5f9 !important;
-}
-body.dark-mode .btn-primary {
-  background-color: #3b82f6 !important;
-  border-color: #3b82f6 !important;
-  color: #fff !important;
-}
-body.dark-mode .sidebar {
-  background-color: #1e293b !important;
-  color: #e2e8f0 !important;
-}
-body.dark-mode .sidebar .menu a.btn {
-  background: linear-gradient(135deg, #334155, #475569) !important;
-  color: #e2e8f0 !important;
-}
-body.dark-mode .btn-danger {
-  background-color: #dc2626 !important;
-  border-color: #dc2626 !important;
-  color: #fff !important;
-}
+
 body {
   margin: 0;
   padding: 0;
 }
-.dark-mode-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 1001;
-}
+
 .no-top-margin {
   margin-top: 0 !important;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 #fruit-tea .section-heading,
 #coffee .section-heading {
-  margin-top: -10px !important; /* Di chuyển lên một chút */
+  margin-top: -10px !important;
 }
