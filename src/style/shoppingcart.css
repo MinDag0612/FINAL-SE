@@ -55,6 +55,80 @@ body {
 
 
 
+.cart-button {
+    transition: opacity 0.3s ease;
+}
+.offcanvas.show ~ .cart-button {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+.content-container {
+  transition: margin-right 0.3s ease;
+}
+
+.offcanvas.show ~ .content-container {
+  margin-right: 250px;
+}
+
+main {
+  transition: margin-right 0.3s ease;
+}
+
+.menu-section {
+  transition: width 0.3s ease;
+}
+
+.offcanvas.show ~ .content-container .dark-mode-toggle {
+  right: calc(20px + 50px + 20px + 250px);
+}
+
+
+
+
+
+/* Remove*/
+.remove-item {
+    padding: 0.15rem 0.4rem;
+    line-height: 1;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.remove-item:hover {
+    background-color: #dc3545;
+    color: white !important;
+    transform: scale(1.1);
+}
+
+/* Cart items container */
+#cartItemsContainer {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Custom scrollbar */
+#cartItemsContainer::-webkit-scrollbar {
+    width: 5px;
+}
+
+#cartItemsContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#cartItemsContainer::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#cartItemsContainer::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 
 
 
@@ -63,7 +137,6 @@ body {
 /* COUNTER */
 
 
-/* Add this to your CSS */
 .counter {
     display: flex;
     align-items: center;

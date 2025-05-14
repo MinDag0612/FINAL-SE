@@ -7,12 +7,14 @@
 	    <link rel="stylesheet" href="style/shoppingcart.css" />
 	</head>
     <body>
+	<div class="content-container">
 
 		{# Cart (right side bar) #}
 		<button class="position-fixed top-0 end-0 m-3 p-2 bg-transparent border-0 cart-button"
 				data-bs-toggle="offcanvas" 
 				data-bs-target="#offcanvasScrolling"
-				aria-label="Shopping Cart">
+				aria-label="Shopping Cart"
+				id="cartButton">
 				<img src="style/image/cart4.svg" alt="Cart Icon" 
 				class="w-100" 
 				style="width: 50px; height: 50px; filter: brightness(0) 
@@ -27,7 +29,7 @@
 			</div>
 			<div class="offcanvas-body d-flex flex-column">
 				<!-- Cart Items Container -->
-            	<div id="cartItemsContainer" class="flex-grow-1">
+            	<div id="cartItemsContainer" class="flex-grow-1 overflow-auto">
 					<p class="text-center">Your cart is empty</p>
 				</div>
 				
@@ -41,5 +43,6 @@
             	</div>
 			</div>
 		</div>
+	</div>
     </body>
 </html>
