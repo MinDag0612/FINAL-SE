@@ -1,0 +1,357 @@
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* Biến màu và font */
+:root {
+  --primary-color: #6f4e37;
+  --secondary-color: #a0522d;
+  --accent-color: #ffffff;
+  --decent-color: #d6e8db;
+  --font-family: "Poppins", sans-serif;
+  --text-color: #333333;
+}
+
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body,
+h1,
+h2,
+h5,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: all 0.3s ease-in-out;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  padding: 1rem;
+  background: #f5f5dc;
+  color: var(--primary-color);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar .logo {
+  height: 110px;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.shop-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar .menu a.btn {
+  display: block;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white !important;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: none !important; /* Ensure no border */
+}
+
+.sidebar .menu a.btn:hover {
+  background: linear-gradient(135deg, #5c3c2d, #8b4513);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .menu a.btn:active,
+.sidebar .menu a.btn.active {
+  background: linear-gradient(135deg, #4e342e, #6d4c41);
+  transform: scale(0.98);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Phần chính */
+main {
+  margin-left: 200px;
+  padding: 0 20px 20px;
+  background-color: #f9f6f1;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  min-height: 100vh;
+}
+
+.menu-section {
+  padding: 0 0 40px;
+}
+
+/* Tiêu đề mục menu */
+.section-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  scroll-margin-top: 80px;
+  text-align: center;
+}
+
+main section:first-of-type {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Card đồ uống */
+.drink-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  height: 100%;
+}
+
+.drink-card:hover {
+  transform: translateY(-5px);
+}
+
+.drink-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.drink-card h5 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Nút giỏ hàng */
+button[data-bs-toggle="offcanvas"] {
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button[data-bs-toggle="offcanvas"]:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode main {
+  background-color: #0f172a !important;
+  background-image: none !important;
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .drink-card {
+  background-color: #1e293b !important;
+  color: #e2e8f0 !important;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05) !important;
+}
+
+body.dark-mode .drink-card h5 {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .section-heading {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .btn-primary {
+  background-color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+  color: #fff !important;
+}
+
+body.dark-mode .sidebar {
+  background-color: #1e293b !important;
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .sidebar .menu a.btn {
+  background: linear-gradient(135deg, #334155, #475569) !important;
+  color: #e2e8f0 !important;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .sidebar .menu a.btn:hover {
+  background: linear-gradient(135deg, #475569, #64748b) !important;
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* User greeting styles */
+.user-greeting {
+  background-color: #fbe9e7;
+  border: 2px solid #ffab91;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-greeting h4 {
+  margin: 0;
+  color: #4e342e;
+  font-weight: bold;
+}
+
+/* Dark mode toggle styles */
+.dark-mode-toggle {
+  position: fixed;
+  left: 220px;
+  top: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-container {
+  width: 70px;
+  height: 34px;
+  background: linear-gradient(135deg, #8b5a2b, #cd853f);
+  border-radius: 17px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+}
+
+.toggle-container.dark {
+  background: linear-gradient(135deg, #2c3e50, #4b6584);
+}
+
+.toggle-ball {
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-ball.dark {
+  transform: translateX(36px);
+}
+
+.toggle-ball::before {
+  content: "☀️";
+  color: #f1c40f;
+}
+
+.toggle-ball.dark::before {
+  content: "🌙";
+  color: #3498db;
+}
+
+/* Ensure toggle is not hidden */
+#darkToggle {
+  display: none;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  .row-cols-md-4 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    left: auto;
+  }
+}
+
+.no-top-margin {
+  margin-top: 0 !important;
+}
+
+#fruit-tea .section-heading,
+#coffee .section-heading {
+  margin-top: -10px !important;
+}

@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build: .
-    container_name: php_web
+    container_name: php_web_1
     ports:
       - "8082:80"  # Đổi cổng 8080 thành 8082 để tránh xung đột
     volumes:

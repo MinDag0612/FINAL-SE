@@ -1,6 +1,6 @@
 <?php
     require 'vendor/autoload.php';
-    require_once 'connect.php';
+    require_once 'api/connect.php';
 
     $loader = new \Twig\Loader\FilesystemLoader('templates');
     $twig = new \Twig\Environment($loader);
