@@ -6,46 +6,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style/home.css" />
     <link rel="stylesheet" href="style/style_home.css" />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      /* Counter styles */
-      .counter {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          margin-top: 8px;
-      }
-      .counter-btn {
-          width: 24px;
-          height: 24px;
-          border-radius: 50%;
-          background-color: #6f4e37;
-          color: white;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          font-size: 14px;
-          border: none;
-          transition: background-color 0.2s;
-      }
-      .counter-btn:hover {
-          background-color: #5c3c2d;
-      }
-      .count {
-          min-width: 20px;
-          text-align: center;
-      }
-      /* Adjust main content to accommodate cart */
-      main {
-          margin-right: 60px;
-      }
-    </style>
   </head>
   <body>
+    <div class="dark-mode-toggle">
+      <div class="toggle-container" id="toggleContainer">
+        <div class="toggle-ball" id="toggleBall"></div>
+      </div>
+    </div>
     <div class="sidebar">
       <div class="logo">
         <img src="style/image/logo.png" alt="logo shop" class="shop-logo" />
@@ -57,19 +24,23 @@
         <li><a href="#ice-blended" class="btn">Ice-blended</a></li>
         <li><a href="#dessert" class="btn">Dessert</a></li>
         <li><a href="#topping" class="btn">Topping</a></li>
-        <li><a href="signin.html" class="btn btn-danger">Logout</a></li>
+        <li><a href="signin.html" class="btn">Logout</a></li>
       </ul>
     </div>
 
-    <main class="px-4 pb-4 pt-0" style="margin-left: 220px">
-      <section id="milk-tea" class="menu-section mt-5">
-        <h2 class="section-heading">Milk Tea</h2>
+    <main class="px-4 pb-4" style="margin-left: 200px; padding-top: 50px">
+      <div class="user-greeting text-center mb-4">
+        <h4>Brewed to perfection, served with passion☕</h4>
+      </div>
+
+      <section id="milk-tea" class="menu-section no-top-margin">
+        <h2 class="section-heading text-center">Milk Tea</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/trasua_anh.png" alt="Milk Tea" class="img-fluid" />
-              <h5>Classic Milk Tea</h5>
-              <p>$3.99</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -77,25 +48,11 @@
               </div>
             </div>
           </div>
-
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/trasua_anh.png" alt="Taro Milk Tea" class="img-fluid" />
-              <h5>Taro Milk Tea</h5>
-              <p>$4.25</p>
-              <div class="counter">
-                <button class="counter-btn minus">-</button>
-                <span class="count">0</span>
-                <button class="counter-btn plus">+</button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="drink-card">
-              <img src="style/image/trasua_anh.png" alt="Matcha Milk Tea" class="img-fluid" />
-              <h5>Matcha Milk Tea</h5>
-              <p>$4.50</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -106,9 +63,22 @@
           
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/trasua_anh.png" alt="Honeydew Milk Tea" class="img-fluid" />
-              <h5>Honeydew Milk Tea</h5>
-              <p>$4.25</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <div class="counter">
+                <button class="counter-btn minus">-</button>
+                <span class="count">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -119,14 +89,14 @@
         </div>
       </section>
 
-      <section id="fruit-tea" class="menu-section mt-5">
-        <h2 class="section-heading">Fruit Tea</h2>
+      <section id="fruit-tea" class="menu-section">
+        <h2 class="section-heading text-center">Fruit Tea</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/fruit.png" alt="Passion Fruit Tea" class="img-fluid" />
-              <h5>Passion Fruit Tea</h5>
-              <p>$4.25</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -134,12 +104,23 @@
               </div>
             </div>
           </div>
-
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/fruit.png" alt="Mango Green Tea" class="img-fluid" />
-              <h5>Mango Green Tea</h5>
-              <p>$4.25</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <div class="counter">
+                <button class="counter-btn minus">-</button>
+                <span class="count">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -150,22 +131,9 @@
           
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/fruit.png" alt="Lychee Black Tea" class="img-fluid" />
-              <h5>Lychee Black Tea</h5>
-              <p>$4.25</p>
-              <div class="counter">
-                <button class="counter-btn minus">-</button>
-                <span class="count">0</span>
-                <button class="counter-btn plus">+</button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="drink-card">
-              <img src="style/image/fruit.png" alt="Strawberry Jasmine Tea" class="img-fluid" />
-              <h5>Strawberry Jasmine Tea</h5>
-              <p>$4.50</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -176,14 +144,14 @@
         </div>
       </section>
 
-      <section id="coffee" class="menu-section mt-5">
-        <h2 class="section-heading">Coffee</h2>
+      <section id="coffee" class="menu-section">
+        <h2 class="section-heading text-center">Coffee</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/coffee.png" alt="Vietnamese Coffee" class="img-fluid" />
-              <h5>Vietnamese Coffee</h5>
-              <p>$3.50</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -191,12 +159,11 @@
               </div>
             </div>
           </div>
-
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/coffee.png" alt="Latte" class="img-fluid" />
-              <h5>Latte</h5>
-              <p>$4.50</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -204,12 +171,11 @@
               </div>
             </div>
           </div>
-          
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/coffee.png" alt="Cappuccino" class="img-fluid" />
-              <h5>Cappuccino</h5>
-              <p>$4.50</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -217,12 +183,11 @@
               </div>
             </div>
           </div>
-          
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/coffee.png" alt="Americano" class="img-fluid" />
-              <h5>Americano</h5>
-              <p>$3.75</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -233,14 +198,14 @@
         </div>
       </section>
 
-      <section id="ice-blended" class="menu-section mt-5">
-        <h2 class="section-heading">Ice-blended</h2>
+      <section id="ice-blended" class="menu-section">
+        <h2 class="section-heading text-center">Ice-blended</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/ice.png" alt="Mocha Frappe" class="img-fluid" />
-              <h5>Mocha Frappe</h5>
-              <p>$5.25</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -248,12 +213,11 @@
               </div>
             </div>
           </div>
-
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/ice.png" alt="Caramel Frappe" class="img-fluid" />
-              <h5>Caramel Frappe</h5>
-              <p>$5.25</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -261,12 +225,11 @@
               </div>
             </div>
           </div>
-          
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/ice.png" alt="Matcha Frappe" class="img-fluid" />
-              <h5>Matcha Frappe</h5>
-              <p>$5.50</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -274,12 +237,11 @@
               </div>
             </div>
           </div>
-          
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/ice.png" alt="Strawberry Frappe" class="img-fluid" />
-              <h5>Strawberry Frappe</h5>
-              <p>$5.50</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -290,14 +252,14 @@
         </div>
       </section>
 
-      <section id="dessert" class="menu-section mt-5">
-        <h2 class="section-heading">Dessert</h2>
+      <section id="dessert" class="menu-section">
+        <h2 class="section-heading text-center">Desert</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/desert.png" alt="Cheesecake" class="img-fluid" />
-              <h5>Cheesecake</h5>
-              <p>$4.50</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -305,12 +267,11 @@
               </div>
             </div>
           </div>
-
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/desert.png" alt="Tiramisu" class="img-fluid" />
-              <h5>Tiramisu</h5>
-              <p>$5.00</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -318,12 +279,11 @@
               </div>
             </div>
           </div>
-          
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/desert.png" alt="Macarons" class="img-fluid" />
-              <h5>Macarons (4pc)</h5>
-              <p>$4.75</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -331,12 +291,11 @@
               </div>
             </div>
           </div>
-          
           <div class="col">
             <div class="drink-card">
-              <img src="style/image/desert.png" alt="Chocolate Lava Cake" class="img-fluid" />
-              <h5>Chocolate Lava Cake</h5>
-              <p>$5.25</p>
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
               <div class="counter">
                 <button class="counter-btn minus">-</button>
                 <span class="count">0</span>
@@ -347,8 +306,62 @@
         </div>
       </section>
 
-      <section id="topping" class="menu-section mt-5">
-        <h2 class="section-heading">Topping</h2>
+      <section id="topping" class="menu-section">
+        <h2 class="section-heading text-center">Topping</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <div class="counter">
+                <button class="counter-btn minus">-</button>
+                <span class="count">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <div class="counter">
+                <button class="counter-btn minus">-</button>
+                <span class="count">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <div class="counter">
+                <button class="counter-btn minus">-</button>
+                <span class="count">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="drink-card">
+              <img src="" alt="Product Image" class="img-fluid" />
+              <h5>Product Name</h5>
+              <p>$0.00</p>
+              <div class="counter">
+                <button class="counter-btn minus">-</button>
+                <span class="count">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="topping" class="menu-section">
+        <h2 class="section-heading text-center">Topping</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
             <div class="drink-card">
@@ -405,9 +418,21 @@
       </section>
     </main>
 
-    {% include 'shoppingcart.html.twig' %}
-
     <script src="templates/counter.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const toggleContainer = document.getElementById("toggleContainer");
+      const toggleBall = document.getElementById("toggleBall");
+
+      toggleContainer.addEventListener("click", () => {
+        toggleBall.classList.toggle("dark");
+        toggleContainer.classList.toggle("dark");
+        document.body.classList.toggle("dark-mode");
+      });
+    </script>
   </body>
 </html>
