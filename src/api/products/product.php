@@ -1,6 +1,7 @@
 <?php
     require_once '../connect.php';
     header('Content-Type: application/json');
+
     
     function  get_product($style){
         global $conn;
@@ -25,7 +26,7 @@
 
     }
 
-    function  get_all_product(){
+    function get_all_product(){
         global $conn;
 
         $query = $conn->prepare('SELECT * FROM products');

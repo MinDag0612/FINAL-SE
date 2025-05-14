@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Import font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
@@ -12,12 +13,25 @@
 }
 
 /* Reset mặc định */
+=======
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+:root {
+  --primary-color: #99a98f;
+  --decent-color: #d6e8db;
+  --accent-color: #ffffff;
+  --secondary-color: rgb(9, 189, 9);
+  --font-family: "Poppins", sans-serif;
+  --text-color: gray;
+}
+
+>>>>>>> fd5e00e80d2b8584b05e385b44025710eceeb73a
 * {
   margin: 0;
   padding: 0;
   border: none;
   outline: none;
   box-sizing: border-box;
+<<<<<<< HEAD
   font-family: var(--font-family);
 }
 
@@ -46,12 +60,24 @@ body {
 /* Sidebar */
 .sidebar {
   position: fixed;
+=======
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+.sidebar {
+  position: sticky;
+>>>>>>> fd5e00e80d2b8584b05e385b44025710eceeb73a
   top: 0;
   left: 0;
   width: 200px;
   height: 100vh;
   padding: 1rem;
   background: #f5f5dc;
+<<<<<<< HEAD
   color: var(--primary-color);
   z-index: 1000;
   overflow-y: auto;
@@ -60,6 +86,15 @@ body {
 
 .sidebar .logo {
   height: 110px;
+=======
+  color: #6f4e37;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  height: 80px;
+>>>>>>> fd5e00e80d2b8584b05e385b44025710eceeb73a
   padding: 16px 0;
   text-align: center;
 }
@@ -70,14 +105,22 @@ body {
   object-fit: contain;
   display: block;
   margin: 0 auto;
+<<<<<<< HEAD
 }
 
 .sidebar .menu {
+=======
+  margin-top: -35px;
+}
+
+.menu {
+>>>>>>> fd5e00e80d2b8584b05e385b44025710eceeb73a
   list-style: none;
   padding: 0;
   margin-top: 60px;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   gap: 12px;
 }
 
@@ -354,4 +397,70 @@ body.dark-mode .sidebar .menu a.btn:hover {
 #fruit-tea .section-heading,
 #coffee .section-heading {
   margin-top: -10px !important;
+=======
+  height: calc(100% - 150px);
+  gap: 16px;
+}
+
+.logout {
+  margin-top: auto;
+}
+
+.menu li {
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menu li:hover,
+.menu li.active {
+  background-color: #e6d3b399;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.75rem 1rem;
+  color: #6f4e37;
+  font-size: 14px;
+  text-decoration: none;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+
+.menu a i {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.menu img.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.menu a span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* main */
+.menu--list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.menu--item {
+  width: 114px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid var(--decent-color);
+  border-radius: 10px;
+  padding: 10px 13px;
+  color: grey;
+}
+.menu--item img {
+  width: 100%;
+>>>>>>> fd5e00e80d2b8584b05e385b44025710eceeb73a
 }
