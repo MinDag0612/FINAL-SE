@@ -89,3 +89,15 @@ body {
     min-width: 20px;
     text-align: center;
 }
+
+/* Nút quản lý đơn */
+    #manage-order-button {
+      position: fixed;
+      top: 20px;
+      right: 90px; /* Tách xa giỏ hàng */
+      z-index: 1060;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }

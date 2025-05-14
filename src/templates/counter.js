@@ -108,3 +108,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateCartDisplay();
 });
+
+document.getElementById('checkoutForm').addEventListener('submit', function (e) {
+    // Truyền đối tượng cart vào input hidden dưới dạng JSON
+    const cartInput = document.getElementById('cartDataInput');
+    cartInput.value = JSON.stringify(cart);
+});
