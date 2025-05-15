@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2025 at 06:24 AM
+-- Generation Time: May 15, 2025 at 01:57 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -30,16 +30,38 @@ SET time_zone = "+00:00";
 CREATE TABLE `account` (
   `name` varchar(50) NOT NULL,
   `id` varchar(20) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `role` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `account`
 --
 
-INSERT INTO `account` (`name`, `id`, `password`) VALUES
-('User 1', 'U1', '$2y$10$w1duWRA5IW9qyi7B57lkXORwB3E28y.AEVm.tISqjSpMXDGW2yULi'),
-('User 2', 'U2', '$2y$10$5kszB0YuXqCjoURGpcUDouR4IjmLXZYuVT.0WPTcvmA8U5jEMG7UG');
+INSERT INTO `account` (`name`, `id`, `password`, `role`) VALUES
+('customer 3', 'cus 3', '$2y$10$CazGWWB.4PLoMMWaVYwL6.nd4vT6Jw30ofmDnf9sdBKevsQjLaMDi', 'customer'),
+('customer 1', 'customer', '$2y$10$318sWPdFXDf6IeE8Rmmzj.w/gv4IxC3apdydKTsDMn9x4wbajAWjK', 'customer'),
+('staff 1', 'staff', '$2y$10$aNlucbLqjLhKPwvxV.pfK.9DRyffzhhrPvFhsxNjFKGjQa0KGax1q', 'staff'),
+('staff 2', 'staff 2', '$2y$10$m//OgPvrhP9smX6gNSa4GOMumcAFo9HzfNCHBOkBkxKPmMv8VsAku', 'staff');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `feedbacks`
+--
+
+CREATE TABLE `feedbacks` (
+  `name` varchar(255) NOT NULL,
+  `feedback` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `feedbacks`
+--
+
+INSERT INTO `feedbacks` (`name`, `feedback`) VALUES
+('name 1', 'feedback 1'),
+('Tôn Minh Đăng', '111');
 
 -- --------------------------------------------------------
 
@@ -151,6 +173,12 @@ INSERT INTO `products` (`style`, `name`, `price`, `img`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `account`
+--
+ALTER TABLE `account`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `orders`
