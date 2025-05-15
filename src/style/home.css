@@ -11,3 +11,13 @@ body {
   background-color: #f5f5dc;
 }
 
+.intro-section {
+  background-color: #4b3f33 !important;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+.dark-mode .intro-section {
+  background-color: #2e2e2e !important;
+  color: #f1f1f1;
+}
+

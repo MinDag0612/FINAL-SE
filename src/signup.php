@@ -6,6 +6,7 @@
     $twig = new \Twig\Environment($loader);
 
     if ($_SERVER['REQUEST_METHOD'] == "POST"){
+        $role = $_POST["role"];
         $name = $_POST['fullname'];
         $id = $_POST['staff_id'];
         $pass = $_POST['password'];
@@ -27,8 +28,8 @@
         }
         else{
             $hashed = password_hash($pass, PASSWORD_BCRYPT);
-            $queryStore = $conn->prepare("INSERT INTO account (name, id, password) VALUES (?, ?, ?)");
-            $queryStore->bind_param("sss", $name, $id, $hashed);
+            $queryStore = $conn->prepare("INSERT INTO account (name, id, password, role) VALUES (?, ?, ?, ?)");
+            $queryStore->bind_param("ssss", $name, $id, $hashed, $role);
             $queryStore->execute();
             echo $twig->render('signup.html.twig', ['error' => "Signup successful, please login"]);
         }

@@ -16,6 +16,12 @@ body {
   color: white;
   border: none;
 }
+
 .custom-reg:hover {
   background-color: #996a5e;
+}
+
+.custom-reg.active {
+  background-color: #996a5e;
+  color: white;
 }
