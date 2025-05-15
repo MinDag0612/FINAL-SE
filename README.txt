@@ -44,3 +44,8 @@ Nếu chưa cài Docker, bạn có thể tải về và cài đặt tại [Docke
 git clone hhttps://github.com/MinDag0612/FINAL-SE.git
 cd final_se
 docker-compose up --build
+
+tài khoảng admin chỉ có 1
+id: admin
+pass: admin
+role:staff

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2025 at 01:57 PM
+-- Generation Time: May 15, 2025 at 03:39 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -39,6 +39,7 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`name`, `id`, `password`, `role`) VALUES
+('admin', 'admin', 'admin', 'staff'),
 ('customer 3', 'cus 3', '$2y$10$CazGWWB.4PLoMMWaVYwL6.nd4vT6Jw30ofmDnf9sdBKevsQjLaMDi', 'customer'),
 ('customer 1', 'customer', '$2y$10$318sWPdFXDf6IeE8Rmmzj.w/gv4IxC3apdydKTsDMn9x4wbajAWjK', 'customer'),
 ('staff 1', 'staff', '$2y$10$aNlucbLqjLhKPwvxV.pfK.9DRyffzhhrPvFhsxNjFKGjQa0KGax1q', 'staff'),
@@ -55,14 +56,6 @@ CREATE TABLE `feedbacks` (
   `feedback` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `feedbacks`
---
-
-INSERT INTO `feedbacks` (`name`, `feedback`) VALUES
-('name 1', 'feedback 1'),
-('Tôn Minh Đăng', '111');
-
 -- --------------------------------------------------------
 
 --
@@ -77,13 +70,6 @@ CREATE TABLE `orders` (
   `status` varchar(50) DEFAULT 'Pending',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`id`, `user_id`, `items`, `total_price`, `status`, `created_at`) VALUES
-(13, 'guest', 'Matcha Milk Tea x 3', 126000.00, 'Pending', '2025-05-14 20:55:54');
 
 -- --------------------------------------------------------
 
@@ -194,7 +180,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

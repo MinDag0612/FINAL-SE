@@ -8,6 +8,7 @@
         body { padding: 30px; }
         .status-select { min-width: 130px; }
     </style>
+    <link rel="stylesheet" href="style/home.css" />
 </head>
 <body>
     <h2 class="mb-4" style="color: aliceblue;">Danh sách đơn hàng</h2>
@@ -49,6 +50,29 @@
         <a href="orders_admin.php" id="delete-history" class="btn btn-danger mb-3">Reset history</a>
     {% endif %}
 
+    <h2 class="mb-4" style="color: aliceblue;">Danh sách đơn hàng</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name customer</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for feed in feedback %}
+            <tr>
+                <td>{{ feed.name }}</td>
+                <td>{{ feed.feedback }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="home.php" class="btn btn-secondary mb-3">← Quay lại home</a>
+    
+    {% if data.id == "admin" %}
+        <a href="orders_admin.php" id="delete-feed" class="btn btn-danger mb-3">Reset feedback</a>
+    {% endif %}
+
 
     <script>
         document.querySelectorAll('.status-select').forEach(select => {
@@ -67,7 +91,21 @@
                 });
             });
         });
-        document.getElementById("delete-history").addEventListener('click', (event) => {
+        document.getElementById("delete-feed").addEventListener('click', (event) => {
+             fetch('deleteFeed.php', {
+                method: 'POST'
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Trang reload lại
+                window.location.reload();
+            })
+            .catch(error => {
+                console.error("Lỗi:", error);
+            });
+                })
+
+                document.getElementById("delete-history").addEventListener('click', (event) => {
              fetch('resetHistory.php', {
                 method: 'POST'
             })

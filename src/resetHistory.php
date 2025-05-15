@@ -8,6 +8,6 @@
     if ($_SERVER['REQUEST_METHOD'] == "POST"){
         $query = $conn->prepare("DELETE FROM orders");
         $query->execute();
-        echo $twig->render('orders_admin.php');
+        
     }
 ?>
