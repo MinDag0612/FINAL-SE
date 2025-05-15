@@ -53,6 +53,7 @@ $stmt->close();
             background-color: #fff;
         }
     </style>
+    <link rel="stylesheet" href="style/home.css" />
 </head>
 <body>
     <div class="invoice-box">
